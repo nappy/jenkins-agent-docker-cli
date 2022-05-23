@@ -1,7 +1,7 @@
 FROM jenkins/inbound-agent:latest
 USER root
 RUN apt-get update
-RUN apt-get install \
+RUN apt-get install -y \
     ca-certificates \
     curl \
     gnupg \
