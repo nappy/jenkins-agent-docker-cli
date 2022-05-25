@@ -3,6 +3,9 @@ pipeline {
     environment {
         dockerImage = ''
     }
+    triggers {
+        cron('@daily')
+    }
     stages {
         stage('Build Image') {
             steps {
