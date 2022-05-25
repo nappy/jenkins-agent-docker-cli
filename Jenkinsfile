@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('', 'nyri-dockerhub') {
-                        if (env.BRANCH_NAME == 'master') {
+                        if (env.BRANCH_NAME == 'main') {
                             dockerImage.push('latest')
                         }
                     }
