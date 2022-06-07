@@ -10,7 +10,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                    dockerImage = docker.build('nyri/jenkins-agent-docker-cli')
+                    dockerImage = docker.build('nyri/jenkins-agent-docker-cli', '--pull .')
                 }
             }
         }
