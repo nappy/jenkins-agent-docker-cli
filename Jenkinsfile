@@ -17,7 +17,7 @@ pipeline {
         stage('Push Image') {
             steps {
                 script {
-                    docker.withRegistry('', 'nyri-dockerhub') {
+                    docker.withRegistry('', 'dockerhub-nyri') {
                         if (env.BRANCH_NAME == 'main') {
                             dockerImage.push('latest')
                         }
